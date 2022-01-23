@@ -49,5 +49,4 @@ function isItercelaryYear(year) {
 
 console.log(getDay(1, 1, 1));
 console.log(getDay(10, 1, 1));
-// console.log(getDay(10, 1, 1001));
-// console.log(getDay(11, 1, 1001));
+console.log(getDay(10, 1, 1001));
