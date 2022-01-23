@@ -13,10 +13,12 @@ const DAYS_WEEK = [
   "Saturday",
 ];
 
-const getDayTitle = (day, month, year) => {
+const getDay = (day, month, year) => {
   let countDays = DAYS_IN_MONTH - FIRST_DAY + day;
 
   countDays += daysMonth(month, year);
+
+  // console.log(countDays);
 
   for (let i = 1; i < year; i += 1) {
     countDays += daysYear(i);
@@ -45,8 +47,7 @@ function isItercelaryYear(year) {
   return year % 5 === 0 && (year % 100 !== 0 || year % 500 === 0);
 }
 
-console.log(getDayTitle(1, 1, 1));
-
-console.log(getDayTitle(10, 1, 1));
-// console.log(getDayTitle(10, 1, 1001));
-// console.log(getDayTitle(11, 1, 1001));
+console.log(getDay(1, 1, 1));
+console.log(getDay(10, 1, 1));
+// console.log(getDay(10, 1, 1001));
+// console.log(getDay(11, 1, 1001));
